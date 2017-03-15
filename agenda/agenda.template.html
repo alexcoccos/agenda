@@ -1,11 +1,11 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-6 col-md-4">
+    <div class="col-sm-6 col-md-4" ng-repeat="app in appuntamenti">
       <div class="thumbnail" style="border: 2px solid {{app.priorita}}; border-radius:10px">
-        <img src="http://scontent.cdninstagram.com/t51.2885-15/s480x480/e15/11427300_1031981593479479_60218334_n.jpg?ig_cache_key=MTAxNDAwNjE2MTUxMzIyNzg3NQ%3D%3D.2" alt="">
+        <img ng-src="{{app.image}}" width="100px;">
         <div class="caption">
           <h3>{{app.titolo}}</h3>
-          
+          <p>{{app.data | date:'dd/MM/yyyy'}}</p>
           <p>
             <a href="#" class="btn btn-primary" role="button">Apri</a>
             <a href="#" class="btn btn-danger" role="button">Elimina</a>
