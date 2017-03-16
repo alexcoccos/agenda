@@ -2,7 +2,7 @@
   <ng-include src="'navbar.template.html'"></ng-include>
   <div class="row">
 
-    <div class="col-sm-6 col-md-4" ng-repeat="app in appuntamenti">
+    <div class="col-sm-6 col-md-4" ng-repeat="app in (risultato = (appuntamenti |filter: ricerca |filtroPriorita: colore))">
       <div class="thumbnail" style="border: 2px solid {{app.priorita}}; border-radius:10px" ng-class="{'alta': app.priorita=='#ff0000', 'media': app.priorita=='#ff3e0', 'bassa':app.priorita=='#00ff00'}">
         <img ng-src="{{app.image}}" width="100px;">
         <div class="caption">
