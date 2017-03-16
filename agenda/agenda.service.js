@@ -65,6 +65,8 @@ angular.module('app').service('AgendaSrv',function(){
   }
   var creaAppuntamento = function(app){
     var nuovo = angular.copy(app);
+    var id = Math.max(...appuntamenti.id);
+    nuovo.appuntamento.id = ++id;
     appuntamenti.push(nuovo);
   }
 
