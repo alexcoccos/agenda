@@ -3,4 +3,10 @@ angular.module('app').controller('DettaglioCtrl',function($scope,AgendaSrv,$stat
 
   $scope.appuntamento= AgendaSrv.dettaglioAppuntamento($state.params.id);
 
+
+
+  $scope.modifica= function(){
+    $scope.appuntamento= AgendaSrv.aggiornaAppuntamento($scope.appuntamento);
+  }
+
 });

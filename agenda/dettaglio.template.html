@@ -1,4 +1,4 @@
-<form>
+<form ng-submit="modifica()" novalidate><!-- ng-submit fa partire la funzione salva anche con invio ed è meglio|| novalidate elimina tutte le validazioni fatte da html5 -->
   <div class="form-group">
     <label for="titolo">Titolo:</label>
     <input type="text" class="form-control" id="titolo" ng-model="appuntamento.titolo">
@@ -27,5 +27,5 @@
     <label for="image">Immagine:</label>
     <input type="" class="form-control" id="image" ng-model="appuntamento.image">
   </div>
-  <button type="submit" class="btn btn-default">Submit</button>
+  <button type="submit" class="btn btn-default">Salva</button>
 </form>

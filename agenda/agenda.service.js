@@ -48,13 +48,31 @@ angular.module('app').service('AgendaSrv',function(){
   var eliminaAppuntamenti= function(indice){
     appuntamenti.splice(indice,1);
   }
+  var aggiornaAppuntamento = function(app){
+    var nuovo = angular.copy(app);//uguale  quello che sta commentto sotto
+      // id: app.id,
+      // titolo: app.titolo,
+      // data: app.data,
+      // descrizione: app.descrizione,
+      // luogo: app.luogo,
+      // priorita: app.priorita,
+      // image: app.image
+ //se chiamiamo invece la lista dal db esterno dovremmo richiamare la function getAppuntamenti
+    var indice = appuntamenti.findIndex(function(el){
+      return el.id == app.id;
+    })
+    appuntamenti.splice(indice,1,nuovo);
+  }
+
 
 
   return{
     getAppuntamenti: getAppuntamenti,
     dettaglioAppuntamento: dettaglioAppuntamento,
-    eliminaAppuntamenti: eliminaAppuntamenti
+    eliminaAppuntamenti: eliminaAppuntamenti,
+    aggiornaAppuntamento: aggiornaAppuntamento
   }
+
 
 
 });
