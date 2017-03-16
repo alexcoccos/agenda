@@ -24,7 +24,7 @@ $stateProvider
     })
     .state('crea',{
       url:'/crea',
-      templateUrl: 'agenda.nuovo.template.html',
+      templateUrl: 'agenda/nuovo.template.html',
       controller: 'NuovoCtrl'
     });
 

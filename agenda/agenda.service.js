@@ -63,6 +63,10 @@ angular.module('app').service('AgendaSrv',function(){
     })
     appuntamenti.splice(indice,1,nuovo);
   }
+  var creaAppuntamento = function(app){
+    var nuovo = angular.copy(app);
+    appuntamenti.push(nuovo);
+  }
 
 
 
@@ -70,7 +74,8 @@ angular.module('app').service('AgendaSrv',function(){
     getAppuntamenti: getAppuntamenti,
     dettaglioAppuntamento: dettaglioAppuntamento,
     eliminaAppuntamenti: eliminaAppuntamenti,
-    aggiornaAppuntamento: aggiornaAppuntamento
+    aggiornaAppuntamento: aggiornaAppuntamento,
+    creaAppuntamento: creaAppuntamento
   }
 
 
