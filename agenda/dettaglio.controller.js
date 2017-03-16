@@ -1,6 +1,6 @@
-angular.module('app').controller('DettaglioCtrl',function($scope,AgendaSrv,$stateParams){
+angular.module('app').controller('DettaglioCtrl',function($scope,AgendaSrv,$stateParams,$state){
 
 
-  //$scope.appuntamento= AgnedaSrv.dettaglioAppuntamento($state.params.id);
+  $scope.appuntamento= AgendaSrv.dettaglioAppuntamento($state.params.id);
 
 });
