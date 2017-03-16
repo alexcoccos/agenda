@@ -14,7 +14,7 @@ angular.module('app').controller('NuovoCtrl',function($scope,AgendaSrv,$state){
   $scope.appuntamento.data= new Date();
 
   $scope.crea= function(){
-    $scope.appuntamento= AgendaSrv.creaAppuntamento($scope.appuntamento);
+    $scope.appuntamento = AgendaSrv.creaAppuntamento($scope.appuntamento);
     $state.go('/');
   }
 
