@@ -21,6 +21,11 @@ $stateProvider
         controller: 'DettaglioCtrl',
         templateUrl: 'agenda/dettaglio.template.html',
 
+    })
+    .state('crea',{
+      url:'/crea',
+      templateUrl: 'agenda.nuovo.template.html',
+      controller: 'NuovoCtrl'
     });
 
 
